@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NeweN</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='images/logo.png' rel='shortcut icon' type='image/png'>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="js/mapa.js"></script>
+		<script> 
+			$(function(){
+				$("#footer").load("g_piePagina.html");
+			});
+		</script> 
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+				
+				<!-- Combo de idioma -->
+				<div id="divIdiomaWeb">
+					<div id="divIdioma">
+						<span>Idioma:</span>
+						<select class="comboIdioma" onchange="location = this.options[this.selectedIndex].value;">
+							<option value="index.html">Español</option>
+							<option value="en/index.html">English</option>
+						</select>
+					</div>
+				</div>
+				
+				<!-- Logo -->
+				<img src="css/images/logoIA.png">
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">NeweN</a></li>
+							<li>
+								<a href="productos.html">Productos</a>
+								<ul>
+									<li><a href="productos.html#bolsas">Bolsas</a></li>
+									<li><a href="productos.html#carpetas">Cajas</a></li>
+									<li><a href="productos.html#carpetas">Carpetas</a></li>
+								</ul>
+							</li>
+							<li class="current"><a href="ubicacion.html">Estamos acá</a></li>
+							<li><a href="contacto.html">Contactanos</a></li>
+						</ul>
+					</nav>
+
+			</div>
+			
+			<!-- Banner -->
+			<section id="banner" style='background-image: url("images/ubicacion.jpg");'>
+				<header>
+					<h2><em>Nosotros estamos acá..</em></h2>
+				</header>
+				<div id="divIdiomaMobile"></div>
+			</section>
+			
+		<!-- Main -->
+			<section class="wrapper style1">
+				<div class="container">
+					<div class="row 200%">
+						<div class="4u 12u(2)">
+							<div id="sidebar">
+
+								<!-- Sidebar -->
+							
+									<section>
+										<h3>Sobre nuestro pueblo</h3>
+										<p>Máximo Paz es una localidad que se encuentra en el sur de Santa Fe, próximo al Arroyo del Medio (límite
+										geográfico que nos separa de la provincia Buenos Aires y que define el "arco de la bota"). Fundado en 1890
+										por Marcelo Paz, nuestro pueblo, es el lugar donde ha nacido y se desarrolla NeweN.</p>
+									</section>
+
+									<section>
+										<h3>Conocé los productos que aquí fabricamos..</h3>
+										<footer>
+											<a href="productos.html" class="button">Productos</a>
+										</footer>
+									</section>
+						
+							</div>
+						</div>
+						<div class="8u 12u(2) important(2)">
+							<div id="content">
+
+								<!-- Content -->
+							
+									<article>
+										<header>
+											<h2>Nuestro lugar, nuestro taller..</h2>
+											<p>Máximo Paz, Santa Fe - Argentina</p>
+										</header>
+										
+										<img class="imageInline" src="images/taller1.jpg" alt="" />
+										<img class="imageInline" src="images/taller2.jpg" alt="" />
+										
+										<p>El lugar donde fabricamos nuestros productos y damos forma a nuestros sueños e ideas.</p>
+										
+										<h3>NeweN en el mapa</h3>
+										
+										<div id="googleMap" style="width:100%;height:400px !important;"></div>
+										
+										<p>Pte. Arturo Illia 431, Máximo Paz, Santa Fe - Argentina<p>
+										
+									</article>
+						
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>			
+
+		<!-- Footer -->
+			<div id="footer"></div>
+
+	</body>
+</html>
