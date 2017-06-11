@@ -40,10 +40,12 @@ class bnm_formmail {
 		$mail->CharSet = "UTF-8";
 		$mail->IsHTML(true);
 		$mail->From     = "info@empaquesnewen.com.ar";
-		$mail->FromName = "mail Newen";
+		$mail->FromName = "info Newen";
 
 		//$mail->Mailer   = "mail";
-		$mail->Host     = "smtp.zoho.com:587"; //"127.0.0.1:25";
+		$mail->Host = "smtp.zoho.com"; //"127.0.0.1:25";
+		$mail->Port = 587;
+		$mail->SMTPAuth = true;
 		$mail->Mailer   = "mail";
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
@@ -55,12 +57,10 @@ class bnm_formmail {
 		$mail->Username   = "info@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
 		$mail->Password   = "4sBbTa7Ty1zL"; // SMTP account password
 		
-		
 		if ($_FILES['fileAttached']['name'] != "") 
 			
 			if ( is_uploaded_file ( $_FILES['fileAttached']['tmp_name']))
 				$mail->AddAttachment ($_FILES['fileAttached']['tmp_name'], $_FILES['fileAttached']['name']);
-			
 			
 		if(!$mail->Send()) {
 //echo "<pre>";print_r($mail);die();
