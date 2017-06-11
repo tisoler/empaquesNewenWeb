@@ -43,7 +43,7 @@ class bnm_formmail {
 		$mail->FromName = "mail Newen";
 
 		//$mail->Mailer   = "mail";
-		$mail->Host     = "smtp.zoho.com:25"; //"127.0.0.1:25";
+		$mail->Host     = "smtp.zoho.com:587"; //"127.0.0.1:25";
 		$mail->Mailer   = "mail";
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
@@ -53,7 +53,7 @@ class bnm_formmail {
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
 		$mail->Username   = "info@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
-		$mail->Password   = "4sBbTa7Ty1zL"; // SMTP account password
+		$mail->Password   = "oso1220$"; // SMTP account password
 		
 		
 		if ($_FILES['fileAttached']['name'] != "") 
