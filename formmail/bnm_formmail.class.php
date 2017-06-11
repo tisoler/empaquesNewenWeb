@@ -53,7 +53,7 @@ class bnm_formmail {
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
 		$mail->Username   = "info@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
-		$mail->Password   = "oso1220$"; // SMTP account password
+		$mail->Password   = "4sBbTa7Ty1zL"; // SMTP account password
 		
 		
 		if ($_FILES['fileAttached']['name'] != "") 
