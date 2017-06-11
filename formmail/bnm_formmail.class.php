@@ -43,7 +43,7 @@ class bnm_formmail {
 		$mail->FromName = "info Newen";
 
 		//$mail->Mailer   = "mail";
-		$mail->Host = "smtp.zoho.com"; //"127.0.0.1:25";
+		$mail->Host = "ssl://smtp.zoho.com"; //"127.0.0.1:25";
 		$mail->Port = 587;
 		$mail->SMTPAuth = true;
 		$mail->SMTPDebug = 3;
