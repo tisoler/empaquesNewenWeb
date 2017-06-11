@@ -44,7 +44,7 @@ class bnm_formmail {
 
 		//$mail->Mailer   = "mail";
 		$mail->Host = "smtp.gmail.com"; //"127.0.0.1:25";
-		//$mail->Port = 587;
+		$mail->Port = 587;
 		$mail->SMTPAuth = true;
 		$mail->SMTPDebug = 3;
 		$mail->SMTPSecure = 'tls';
