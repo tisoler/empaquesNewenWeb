@@ -46,10 +46,9 @@ class bnm_formmail {
 		$mail->Host = "smtp.zoho.com"; //"127.0.0.1:25";
 		$mail->Port = 587;
 		$mail->SMTPAuth = true;
-		$mail->SMTPSecure = 'tls';
+		$mail->Mailer   = "mail";
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
-		$mail->AddAddress("diegompaz@gmail.com", "mail Diego");
 		$mail->AddAddress("info@empaquesnewen.com.ar", "mail Newen");
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
