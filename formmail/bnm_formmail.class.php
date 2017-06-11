@@ -39,21 +39,21 @@ class bnm_formmail {
 		$mail = new PHPMailer();
 		$mail->CharSet = "UTF-8";
 		$mail->IsHTML(true);
-		$mail->From     = "contacto@empaquesnewen.com.ar";
+		$mail->From     = "info@empaquesnewen.com.ar";
 		$mail->FromName = "mail Newen";
 
 		//$mail->Mailer   = "mail";
-		$mail->Host     =  "smtp.zoho.com:465"; //"127.0.0.1:25";
+		$mail->Host     = "smtp.zoho.com:587"; //"127.0.0.1:25";
 		$mail->Mailer   = "mail";
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
 		$mail->AddAddress("diegompaz@gmail.com", "mail Diego");
-		$mail->AddAddress("contacto@empaquesnewen.com.ar", "mail Newen");
+		$mail->AddAddress("info@empaquesnewen.com.ar", "mail Newen");
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
-		$mail->Username   = "contacto@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
-		$mail->Password   = "qhq6iHRI9Zc8"; //"newen2015$";        // SMTP account password
+		$mail->Username   = "info@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
+		$mail->Password   = "4sBbTa7Ty1zL"; // SMTP account password
 		
 		
 		if ($_FILES['fileAttached']['name'] != "") 
