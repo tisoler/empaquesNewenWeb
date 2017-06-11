@@ -47,7 +47,7 @@ class bnm_formmail {
 		$mail->Port = 587;
 		$mail->SMTPAuth = true;
 		$mail->SMTPDebug = 3;
-		$mail->SMTPSecure = 'tls';
+		$mail->SMTPSecure = 'starttls';
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
 		$mail->AddAddress("info@empaquesnewen.com.ar", "mail Newen");
