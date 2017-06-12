@@ -44,7 +44,7 @@ class bnm_formmail {
 
 		//$mail->Mailer   = "mail";
 		$mail->Host = "smtp.zoho.com"; //"127.0.0.1:25";
-		$mail->Port = 465;
+		$mail->Port = 25;
 		$mail->SMTPAuth = true;
 		$mail->SMTPDebug = 2;
 		$mail->SMTPSecure = "SSL";
