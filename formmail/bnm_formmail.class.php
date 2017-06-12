@@ -1,6 +1,7 @@
 <?php
 //die();
-include ( "class.phpmailer.php");
+//include ( "class.phpmailer.php");
+require 'PHPMailerAutoload.php';
 
 class bnm_formmail {
 
@@ -38,8 +39,9 @@ class bnm_formmail {
 
 		$mail = new PHPMailer();
 		$mail->IsHTML(true);
-		$mail->From     = "info@empaquesnewen.com.ar";
-		$mail->FromName = "info Newen";
+		//$mail->From     = "info@empaquesnewen.com.ar";
+		$mail->setFrom('info@empaquesnewen.com.ar', 'mail Newen');
+		//$mail->FromName = "info Newen";
 
 		//$mail->Mailer   = "mail";
 		$mail->Host = "smtp.zoho.com"; //"127.0.0.1:25";
@@ -47,12 +49,12 @@ class bnm_formmail {
 		$mail->SMTPAuth = true;
 		$mail->SMTPDebug = 2;
 		$mail->SMTPSecure = "tls";
-		$mail->Mailer = "smtp";
-		$mail->SMTPKeepAlive = true;
-		$mail->CharSet = 'utf-8';
+		//$mail->Mailer = "smtp";
+		//$mail->SMTPKeepAlive = true;
+		//$mail->CharSet = 'utf-8';
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
-		$mail->AddAddress("info@empaquesnewen.com.ar", "mail Newen");
+		$mail->AddAddress('info@empaquesnewen.com.ar', 'mail Newen');
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
