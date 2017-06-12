@@ -9,25 +9,21 @@ class bnm_formmail {
 
 	function bnm_formmail()
 	{
+		$this->to 			= (isset( $_REQUEST['to'])) ? $_REQUEST['to'] : "";
+		$this->subject 		= (isset( $_REQUEST['subject'])) ? $_REQUEST['subject'] : "Comment form";
+		$this->__Email 		= (isset( $_REQUEST['__Email'])) ? $_REQUEST['__Email'] : "";
+		if (isset ($_REQUEST["email_from"])) 
+				$this->__Email = $_REQUEST["email_from"];
+		$this->from_name 	= (isset($_REQUEST["name_from"])) ? $_REQUEST["name_from"] : "";
 
-
-
-			$this->to 			= (isset( $_REQUEST['to'])) ? $_REQUEST['to'] : "";
-			$this->subject 		= (isset( $_REQUEST['subject'])) ? $_REQUEST['subject'] : "Comment form";
-			$this->__Email 		= (isset( $_REQUEST['__Email'])) ? $_REQUEST['__Email'] : "";
-			if (isset ($_REQUEST["email_from"])) 
-					$this->__Email = $_REQUEST["email_from"];
-			$this->from_name 	= (isset($_REQUEST["name_from"])) ? $_REQUEST["name_from"] : "";
-
-			$this->redirect 		= (isset( $_REQUEST['redirect'])) ? "../" . $_REQUEST['redirect'] : "";
-			$this->text_body		= (isset( $_REQUEST['text_body'])) ? $_REQUEST['text_body'] : "";
-			$this->go 			= (isset( $_REQUEST['go'])) ? $_REQUEST['go'] : "";
-			$this->body_file		= (isset( $_REQUEST['body_file'])) ? $_REQUEST['body_file'] : "";
-			$this->headers 		= "From: " . $this->from ;
-		      $this->no_send 		= array ("to", "subject","redirect","send", "text_body","__utma","__utmz");
-			
-			ini_set ("sendmail_from",$this->__Email);
-
+		$this->redirect 		= (isset( $_REQUEST['redirect'])) ? "../" . $_REQUEST['redirect'] : "";
+		$this->text_body		= (isset( $_REQUEST['text_body'])) ? $_REQUEST['text_body'] : "";
+		$this->go 			= (isset( $_REQUEST['go'])) ? $_REQUEST['go'] : "";
+		$this->body_file		= (isset( $_REQUEST['body_file'])) ? $_REQUEST['body_file'] : "";
+		$this->headers 		= "From: " . $this->from ;
+	      $this->no_send 		= array ("to", "subject","redirect","send", "text_body","__utma","__utmz");
+		
+		ini_set ("sendmail_from",$this->__Email);
 	}
 
 
@@ -38,9 +34,9 @@ class bnm_formmail {
 
 		$mail = new PHPMailer();
 		$mail->IsHTML(true);
-		//$mail->From     = "info@empaquesnewen.com.ar";
-		$mail->setFrom('info@empaquesnewen.com.ar', 'mail Newen');
-		//$mail->FromName = "info Newen";
+		$mail->From     = "info@empaquesnewen.com.ar";
+		//$mail->setFrom('info@empaquesnewen.com.ar', 'mail Newen');
+		$mail->FromName = "info Newen";
 
 		//$mail->Mailer   = "mail";
 		$mail->Host = "smtp.zoho.com"; //"127.0.0.1:25";
