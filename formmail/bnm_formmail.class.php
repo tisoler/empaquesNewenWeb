@@ -1,7 +1,7 @@
 <?php
 //die();
 include ( "class.phpmailer.php");
-
+ 
 class bnm_formmail {
 
 	var $to, $subject, $from, $msg, $redirect, $headers, $attach_file, $go;
