@@ -49,7 +49,8 @@ class bnm_formmail {
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
 		$mail->AddAddress('info@empaquesnewen.com.ar', 'info Newen');
-		$mail->AddAddress('empaquesnewen@gmail.com', 'gmail Newen');
+		$mail->AddAddress('empaquesnewen@gmail.com', 'gmail Lili');
+		$mail->AddAddress('diegompaz@gmail.com', 'gmail Diego');
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
