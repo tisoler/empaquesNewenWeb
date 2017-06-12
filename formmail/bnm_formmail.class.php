@@ -37,7 +37,6 @@ class bnm_formmail {
 		$this-> _create_msg();
 
 		$mail = new PHPMailer();
-		$mail->CharSet = "UTF-8";
 		$mail->IsHTML(true);
 		$mail->From     = "info@empaquesnewen.com.ar";
 		$mail->FromName = "info Newen";
