@@ -33,7 +33,7 @@ class bnm_formmail {
 
 		$mail = new PHPMailer();
 		$mail->IsHTML(true);
-		$mail->From 	= "info@empaquesnewen.com.ar";
+		$mail->From 	= $this->__Email;
 		//$mail->setFrom('info@empaquesnewen.com.ar', 'mail Newen');
 		$mail->FromName = "info Newen";
 
