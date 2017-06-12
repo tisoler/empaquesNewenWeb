@@ -69,7 +69,7 @@ class SMTP
      * Debug level to show connection status, client -> server and server -> client messages
      */
     const DEBUG_CONNECTION = 3;
-
+ 
     /**
      * Debug level to show all messages
      */
