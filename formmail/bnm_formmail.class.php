@@ -44,10 +44,11 @@ class bnm_formmail {
 
 		//$mail->Mailer   = "mail";
 		$mail->Host = "smtp.zoho.com"; //"127.0.0.1:25";
-		$mail->Port = 587;
+		$mail->Port = 465;
 		$mail->SMTPAuth = true;
 		$mail->SMTPDebug = 2;
-		$mail->SMTPSecure = 'tls';
+		$mail->SMTPSecure = "SSL";
+		$mail->SMTPKeepAlive = true;
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
 		$mail->AddAddress("info@empaquesnewen.com.ar", "mail Newen");
