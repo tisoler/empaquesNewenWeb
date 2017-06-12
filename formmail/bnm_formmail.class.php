@@ -33,7 +33,7 @@ class bnm_formmail {
 
 		$mail = new PHPMailer();
 		$mail->IsHTML(true);
-		$mail->From 	= "info@empaquesnewen.com.ar";
+		$mail->From 	= $this->__Email;
 		//$mail->setFrom('info@empaquesnewen.com.ar', 'mail Newen');
 		$mail->FromName = "info Newen";
 
@@ -47,7 +47,7 @@ class bnm_formmail {
 		//$mail->SMTPKeepAlive = true;
 		//$mail->CharSet = 'utf-8';
 		$mail->Body    = $this->msg;
-		$mail->Subject = $this->__Email;
+		$mail->Subject = $this->subject;
 		$mail->AddAddress('info@empaquesnewen.com.ar', 'info Newen');
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
