@@ -129,19 +129,19 @@
 </html>
 
 <script>
-	function obtenerParametroPorNombre(name, url) {
+	function obtenerParametroPorNombre(nombre, url) {
 	    if (!url) url = window.location.href;
-	    name = name.replace(/[\[\]]/g, "\\$&");
-	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-	        results = regex.exec(url);
-	    if (!results) return null;
-	    if (!results[2]) return '';
-	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	    nombre = nombre.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + nombre + "(=([^&#]*)|&|#|$)"),
+	        resultados = regex.exec(url);
+	    if (!resultados) return null;
+	    if (!resultados[2]) return '';
+	    return decodeURIComponent(resultados[2].replace(/\+/g, " "));
 	}
 
 	window.onload = function() {
 		if(obtenerParametroPorNombre('mensaje'))
-			alert('El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
+			alert('Newen dice:', 'El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
 	}
 
 </script>
