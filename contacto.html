@@ -139,8 +139,9 @@
 	    return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
 
-	$(document).ready(function() {
+	window.onload = function() {
 		if(obtenerParametroPorNombre('mensaje'))
 			alert('El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
-	});
+	}
+
 </script>
