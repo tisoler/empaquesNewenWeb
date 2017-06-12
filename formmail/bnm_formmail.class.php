@@ -1,7 +1,6 @@
 <?php
 //die();
 include ( "class.phpmailer.php");
-require 'PHPMailerAutoload.php';
 
 class bnm_formmail {
 
