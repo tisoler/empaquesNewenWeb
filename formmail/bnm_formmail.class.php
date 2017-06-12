@@ -12,8 +12,8 @@ class bnm_formmail {
 		$this->to 			= (isset( $_REQUEST['to'])) ? $_REQUEST['to'] : "";
 		$this->subject 		= (isset( $_REQUEST['subject'])) ? $_REQUEST['subject'] : "Comment form";
 		$this->__Email 		= (isset( $_REQUEST['__Email'])) ? $_REQUEST['__Email'] : "";
-		if (isset ($_REQUEST["email_from"])) 
-			$this->__Email = $_REQUEST["email_from"];
+		if (isset ($_REQUEST["__email_from"])) 
+			$this->__Email = $_REQUEST["__email_from"];
 		$this->from_name 	= (isset($_REQUEST["name_from"])) ? $_REQUEST["name_from"] : "";
 		$this->redirect 	= (isset( $_REQUEST['redirect'])) ? "../" . $_REQUEST['redirect'] : "";
 		$this->text_body	= (isset( $_REQUEST['text_body'])) ? $_REQUEST['text_body'] : "";
