@@ -139,6 +139,8 @@
 	    return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
 
-	if(obtenerParametroPorNombre('mensaje'))
-		alert('El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
+	$( document ).ready(function() {
+		if(obtenerParametroPorNombre('mensaje'))
+			alert('El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
+	}
 </script>
