@@ -33,7 +33,7 @@ class bnm_formmail {
 
 		$mail = new PHPMailer();
 		$mail->IsHTML(true);
-		$mail->From 	= "info@empaquesnewen.com.ar";
+		$mail->From 	= "contacto@empaquesnewen.com.ar";
 		//$mail->setFrom('info@empaquesnewen.com.ar', 'mail Newen');
 		$mail->FromName = "info Newen";
 
@@ -52,8 +52,8 @@ class bnm_formmail {
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
-		$mail->Username   = "info@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
-		$mail->Password   = "4sBbTa7Ty1zL"; // SMTP account password
+		$mail->Username   = "contacto@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
+		$mail->Password   = "qhq6iHRI9Zc8"; // SMTP account password
 		
 		if ($_FILES['fileAttached']['name'] != "") 
 			
