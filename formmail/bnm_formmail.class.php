@@ -47,7 +47,7 @@ class bnm_formmail {
 		//$mail->SMTPKeepAlive = true;
 		//$mail->CharSet = 'utf-8';
 		$mail->Body    = $this->msg;
-		$mail->Subject = $this->__Email;
+		$mail->Subject = $this->subject;
 		$mail->AddAddress('info@empaquesnewen.com.ar', 'info Newen');
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
