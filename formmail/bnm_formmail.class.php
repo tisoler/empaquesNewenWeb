@@ -48,6 +48,8 @@ class bnm_formmail {
 		$mail->SMTPDebug = 2;
 		$mail->SMTPSecure = "tls";
 		$mail->Mailer = "smtp";
+		$mail->SMTPKeepAlive = true;
+		$mail->CharSet = 'utf-8';
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
 		$mail->AddAddress("info@empaquesnewen.com.ar", "mail Newen");
