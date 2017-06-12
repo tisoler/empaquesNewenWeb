@@ -113,7 +113,7 @@
 												</ul>
 											</div>
 										</div>
-										<input type="hidden" name="redirect" value="contacto.html?mensaje=4" />
+										<input type="hidden" name="redirect" value="contacto.html?msj=4" />
 										<input type="hidden" name="subject" value="Newen - Consulta, sugerencia" />
 									</form>
 								</section>
@@ -139,9 +139,9 @@
 	    return decodeURIComponent(resultados[2].replace(/\+/g, " "));
 	}
 
-	window.onload = function() {
-		if(obtenerParametroPorNombre('mensaje'))
-			alert('Newen dice:', 'El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
+	document.onreadystatechange = function() {
+		if(obtenerParametroPorNombre('msj'))
+			alert('El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
 	}
 
 </script>
