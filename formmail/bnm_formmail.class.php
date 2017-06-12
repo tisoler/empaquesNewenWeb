@@ -26,8 +26,8 @@ class bnm_formmail {
 	}
 
 
-	 function send()
-	 {
+	function send()
+	{
 	 
 		$this-> _create_msg();
 
@@ -49,6 +49,7 @@ class bnm_formmail {
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
 		$mail->AddAddress('info@empaquesnewen.com.ar', 'info Newen');
+		$mail->AddAddress('empaquesnewen@gmail.com', 'gmail Newen');
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
