@@ -139,7 +139,7 @@
 	    return decodeURIComponent(resultados[2].replace(/\+/g, " "));
 	}
 
-	document.onreadystatechange = function() {
+	window.onload = function() {
 		if(obtenerParametroPorNombre('msj'))
 			alert('El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
 	}
