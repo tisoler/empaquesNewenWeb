@@ -113,7 +113,7 @@
 												</ul>
 											</div>
 										</div>
-										<input type="hidden" name="redirect" value="contacto.html#" />
+										<input type="hidden" name="redirect" value="contacto.html?mensaje=bien" />
 										<input type="hidden" name="subject" value="Newen - Consulta, sugerencia" />
 									</form>
 								</section>
@@ -127,3 +127,18 @@
 
 	</body>
 </html>
+
+<script>
+	function obtenerParametroPorNombre(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+
+	if(obtenerParametroPorNombre('mensaje'))
+		alert('fff');
+</script>
