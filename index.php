@@ -1,3 +1,3 @@
-<? 
-include ("index.html");
+<?php
+	header("Location: /es/index.html");
 ?>

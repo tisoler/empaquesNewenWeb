@@ -4,7 +4,7 @@
 
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/index.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/index.html</loc>
 
       <lastmod>2015-01-29</lastmod>
 
@@ -14,7 +14,7 @@
 
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/productos.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/productos.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -22,7 +22,7 @@
 
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/ubicacion.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/ubicacion.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -30,7 +30,7 @@
 
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/contacto.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/contacto.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -38,15 +38,7 @@
 
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/cuento.html</loc>
-
-      <changefreq>weekly</changefreq>
-
-   </url>
-   
-   <url>
-
-      <loc>http://www.empaquesnewen.com.ar/elnewen.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/cuento.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -54,7 +46,7 @@
    
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/comerciojusto.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/elnewen.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -62,7 +54,7 @@
    
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/productoBolsaBanksyFlor.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/comerciojusto.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -70,7 +62,7 @@
    
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/productoBolsaBanksyGlobos.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/productoBolsaBanksyFlor.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -78,15 +70,7 @@
    
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/productoBolsaBlancoNegro.html</loc>
-
-      <changefreq>weekly</changefreq>
-
-   </url>
-
-   <url>
-
-      <loc>http://www.empaquesnewen.com.ar/productoBolsaGuardaPampa.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/productoBolsaBanksyGlobos.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -94,7 +78,15 @@
    
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/productoBolsaLibrosGente.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/productoBolsaBlancoNegro.html</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>http://www.empaquesnewen.com.ar/es/productoBolsaGuardaPampa.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -102,7 +94,7 @@
    
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/productoBolsaNavidad.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/productoBolsaLibrosGente.html</loc>
 
       <changefreq>weekly</changefreq>
 
@@ -110,7 +102,15 @@
    
    <url>
 
-      <loc>http://www.empaquesnewen.com.ar/productoBolsaVino.html</loc>
+      <loc>http://www.empaquesnewen.com.ar/es/productoBolsaNavidad.html</loc>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+   
+   <url>
+
+      <loc>http://www.empaquesnewen.com.ar/es/productoBolsaVino.html</loc>
 
       <changefreq>weekly</changefreq>
 

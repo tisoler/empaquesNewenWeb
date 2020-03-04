@@ -13,6 +13,7 @@
 		<script src="../js/skel.min.js"></script>
 		<script src="../js/skel-layers.min.js"></script>
 		<script src="../js/init.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script> 
 			$(function(){
 				$("#footer").load("g_piePagina_en.html");
@@ -36,7 +37,7 @@
 						<span>Language:</span>
 						<select class="comboIdioma" onchange="location = this.options[this.selectedIndex].value;">
 							<option value="index.html">English</option>
-							<option value="../index.html">Español</option>
+							<option value="../es/contacto.html">Español</option>
 						</select>
 					</div>
 				</div>
@@ -92,7 +93,7 @@
 							<div id="content">
 								<section>
 									<h3>You can send us a message here:</h3>
-									<form action="../formmail/mailer.php" method="post" name="frm_contacto" id="frm_contacto"  accept-charset="UTF-8"  enctype="multipart/form-data">
+									<form action="../formmail/mailer.php" method="post" name="frm_contacto" id="frm_contacto" accept-charset="UTF-8" enctype="multipart/form-data">
 										<div class="row 50%">
 											<div class="6u 12u(3)">
 												<input type="text" name="__name" id="name" placeholder="Name" />
@@ -106,14 +107,17 @@
 												<textarea name="__message" id="message" placeholder="Message" rows="5"></textarea>
 											</div>
 										</div>
-										<div class="row 50%">
+										<div class="row 50% g-recaptcha" data-sitekey="6Ldj05kUAAAAALlHfyQIzQ_pSZ_AotgYA6IE6DdR"></div>
+										<div class="row 50%" style="margin-top: 0.7em;">
 											<div class="12u">
 												<ul class="actions">
 													<li><input type="submit" class="button alt" value="Send message" /></li>
 												</ul>
 											</div>
 										</div>
-										<input type="hidden" name="redirect" value="contact.html#" />
+										<input type="hidden" name="redirect" value="en/contact.html?msj=4" />
+										<input type="hidden" name="redirectCaptcha" value="en/contact.html?msj=5" />
+										<input type="hidden" name="redirectError" value="es/contacto.html?msj=6" />
 										<input type="hidden" name="subject" value="Newen - Consulta, sugerencia" />
 									</form>
 								</section>
@@ -128,3 +132,25 @@
 
 	</body>
 </html>
+
+<script>
+	function obtenerParametroPorNombre(nombre, url) {
+	    if (!url) url = window.location.href;
+	    nombre = nombre.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + nombre + "(=([^&#]*)|&|#|$)"),
+	        resultados = regex.exec(url);
+	    if (!resultados) return null;
+	    if (!resultados[2]) return '';
+	    return decodeURIComponent(resultados[2].replace(/\+/g, " "));
+	}
+
+	window.onload = function() {
+		if(obtenerParametroPorNombre('msj') == '4')
+			alert('The message has been sent correctly. Soon we will read your message and we will contact you. Many thanks.');
+		if(obtenerParametroPorNombre('msj') == '5')
+			alert('You have to complete the captcha before to send the message. Please send it again.');
+		if(obtenerParametroPorNombre('msj') == '6')
+			alert('An error has ocurred during the sending of the message. Please try it again');
+	}
+
+</script>

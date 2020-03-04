@@ -1,4 +1,4 @@
-<? 
+<?php
 function HTMLRedirect( $url, $msg='' ) {
 	if (trim( $msg )) {
 		if (strpos( $url, '?' )) {

@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>NeweN</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='../images/logo.png' rel='shortcut icon' type='image/png'>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/jquery.dropotron.min.js"></script>
+		<script src="../js/skel.min.js"></script>
+		<script src="../js/skel-layers.min.js"></script>
+		<script src="../js/init.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script> 
+			$(function(){
+				$("#footer").load("g_piePagina.html");
+			});
+		</script> 
+		<noscript>
+			<link rel="stylesheet" href="../css/skel.css" />
+			<link rel="stylesheet" href="../css/style.css" />
+			<link rel="stylesheet" href="../css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+				
+				<!-- Combo de idioma -->
+				<div id="divIdiomaWeb">
+					<div id="divIdioma">
+						<span>Idioma:</span>
+						<select class="comboIdioma" onchange="location = this.options[this.selectedIndex].value;">
+							<option value="contacto.html">Español</option>
+							<option value="../en/contact.html">English</option>
+						</select>
+					</div>
+				</div>
+				
+				<!-- Logo -->
+				<img src="../css/images/logoIA.png">
+				
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">NeweN</a></li>
+							<li>
+								<a href="productos.html">Productos</a>
+								<ul>
+									<li><a href="productos.html#bolsas">Bolsas</a></li>
+									<li><a href="productos.html#carpetas">Cajas</a></li>
+									<li><a href="productos.html#carpetas">Carpetas</a></li>
+								</ul>
+							</li>
+							<li><a href="ubicacion.html">Estamos acá</a></li>
+							<li class="current"><a href="contacto.html">Contactanos</a></li>
+						</ul>
+					</nav>
+
+			</div>
+			
+			<!-- Banner -->
+			<section id="banner" style='background-image: url("../images/cartas.jpg");'>
+				<header>
+					<h2><em>Consultas, sugerencias..</em></h2>
+				</header>
+				<div id="divIdiomaMobile"></div>
+			</section>
+			
+			<section class="wrapper style1">
+				<div class="container">
+					<div class="row 200%">
+						<div class="4u 12u(2)">
+							<div id="sidebar">
+								<section>
+									<h3>Cartas, llamadas, mails, palomas mensajeras a:</h3>
+									<ul class="links">
+										<li>-Dirección: Pte. Arturo Illia 431 - Máximo Paz, Santa Fe (Argentina)</li>
+										<li>-Teléfono: 03460-496894</li>
+										<li>-Facebook: <a href="http://facebook.com/empaquesNewen" target="_blank">facebook.com/empaquesNewen</a></li>
+										<li>-e-mails: info@empaquesnewen.com.ar / empaquesnewen@gmail.com</li>
+										<li>-Tienda virtual: <a href="http://newen.mercadoshops.com.ar/" target="_blank">newen.mercadoshops.com.ar</a></li>
+									</ul>
+								</section>
+							</div>
+						</div>
+						<div class="8u 12u(2) important(2)">
+							<div id="content">
+								<section>
+									<h3>Escribinos desde aquí mismo</h3>
+									<form action="../formmail/mailer.php" method="post" name="frm_contacto" id="frm_contacto" accept-charset="UTF-8" enctype="multipart/form-data">
+										<div class="row 50%">
+											<div class="6u 12u(3)">
+												<input type="text" name="__name" id="name" placeholder="Nombre" />
+											</div>
+											<div class="6u 12u(3)">
+												<input type="email" name="__email_from" id="email" placeholder="Email" />
+											</div>
+										</div>
+										<div class="row 50%">
+											<div class="12u">
+												<textarea name="__message" id="message" placeholder="Mensaje" rows="5"></textarea>
+											</div>
+										</div>
+										<div class="row 50% g-recaptcha" data-sitekey="6Ldj05kUAAAAALlHfyQIzQ_pSZ_AotgYA6IE6DdR"></div>
+										<div class="row 50%" style="margin-top: 0.7em;">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" class="button alt" value="Enviar mensaje" /></li>
+												</ul>
+											</div>
+										</div>
+										<input type="hidden" name="redirect" value="es/contacto.html?msj=4" />
+										<input type="hidden" name="redirectCaptcha" value="es/contacto.html?msj=5" />
+										<input type="hidden" name="redirectError" value="es/contacto.html?msj=6" />
+										<input type="hidden" name="subject" value="Newen - Consulta, sugerencia" />
+									</form>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<!-- Footer -->
+			<div id="footer"></div>
+
+	</body>
+</html>
+
+<script>
+	function obtenerParametroPorNombre(nombre, url) {
+	    if (!url) url = window.location.href;
+	    nombre = nombre.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + nombre + "(=([^&#]*)|&|#|$)"),
+	        resultados = regex.exec(url);
+	    if (!resultados) return null;
+	    if (!resultados[2]) return '';
+	    return decodeURIComponent(resultados[2].replace(/\+/g, " "));
+	}
+
+	window.onload = function() {
+		if(obtenerParametroPorNombre('msj') == '4')
+			alert('El mensaje fue enviado correctamente. En breve leeremos tu mensaje y nos pondremos en contacto. Muchas gracias.');
+		if(obtenerParametroPorNombre('msj') == '5')
+			alert('Debe completar el captcha antes de enviar el mensaje. Por favor envíelo nuevamente.');
+		if(obtenerParametroPorNombre('msj') == '6')
+			alert('Ha ocurrido un error mientras se enviaba el mensaje. Intente nuevamente por favor.');
+	}
+
+</script>

@@ -16,6 +16,7 @@ class bnm_formmail {
 			$this->__Email = $_REQUEST["__email_from"];
 		$this->from_name 	= (isset($_REQUEST["name_from"])) ? $_REQUEST["name_from"] : "";
 		$this->redirect 	= (isset( $_REQUEST['redirect'])) ? "../" . $_REQUEST['redirect'] : "";
+		$this->redirectCaptcha 	= (isset( $_REQUEST['redirectCaptcha'])) ? "../" . $_REQUEST['redirectCaptcha'] : "";
 		$this->text_body	= (isset( $_REQUEST['text_body'])) ? $_REQUEST['text_body'] : "";
 		$this->go 			= (isset( $_REQUEST['go'])) ? $_REQUEST['go'] : "";
 		$this->body_file	= (isset( $_REQUEST['body_file'])) ? $_REQUEST['body_file'] : "";
@@ -33,42 +34,44 @@ class bnm_formmail {
 
 		$mail = new PHPMailer();
 		$mail->IsHTML(true);
-		$mail->From 	= "contacto@empaquesnewen.com.ar";
+		$mail->From 	= "info@empaquesnewen.com.ar";
 		//$mail->setFrom('info@empaquesnewen.com.ar', 'mail Newen');
-		$mail->FromName = "info Newen";
+		$mail->FromName = "Info Newen";
 
 		//$mail->Mailer   = "mail";
 		$mail->Host 	= "smtp.zoho.com"; //"127.0.0.1:25";
 		$mail->Port 	= 587;
 		$mail->SMTPAuth = true;
-		$mail->SMTPDebug = 2;
+		$mail->SMTPDebug = 3;
 		$mail->SMTPSecure = "tls";
 		//$mail->Mailer = "smtp";
 		//$mail->SMTPKeepAlive = true;
 		//$mail->CharSet = 'utf-8';
 		$mail->Body    = $this->msg;
 		$mail->Subject = $this->subject;
-		$mail->AddAddress('info@empaquesnewen.com.ar', 'info Newen');
-		$mail->AddAddress('empaquesnewen@gmail.com', 'gmail Lili');
-		$mail->AddAddress('diegompaz@gmail.com', 'gmail Diego');
+		$mail->AddAddress('contacto@empaquesnewen.com.ar', 'Contacto Newen');
 		
 		$mail->IsSMTP(); // telling the class to use SMTP
 		$mail->SMTPAuth   = true;                  // enable SMTP authentication
-		$mail->Username   = "contacto@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
-		$mail->Password   = "qhq6iHRI9Zc8"; // SMTP account password
+		$mail->Username   = "info@empaquesnewen.com.ar"; //"info@empaquesnewen.com.ar"; // SMTP account username
+		$mail->Password   = "q92tLqMGEkDz"; // SMTP account password
 		
-		if ($_FILES['fileAttached']['name'] != "") 
-			
-			if ( is_uploaded_file ( $_FILES['fileAttached']['tmp_name']))
-				$mail->AddAttachment ($_FILES['fileAttached']['tmp_name'], $_FILES['fileAttached']['name']);
-			
-		if(!$mail->Send()) {
-//echo "<pre>";print_r($mail);die();
-			echo "There has been a mail error sending to ";
-			echo $mail->ErrorInfo;
+		// if submitted check response
+		if ($_POST["g-recaptcha-response"]) {		
+			if ($_FILES['fileAttached']['name'] != "") 
+				if ( is_uploaded_file ( $_FILES['fileAttached']['tmp_name']))
+					$mail->AddAttachment ($_FILES['fileAttached']['tmp_name'], $_FILES['fileAttached']['name']);
+				
+			if(!$mail->Send()) {
+				if($this->redirectError != "") 
+					HTMLRedirect($this->redirectError);
+			} else {
+				if($this->redirect != "") 
+					HTMLRedirect($this->redirect);
+			}
 		} else {
-			if($this->redirect != "") 
-				HTMLRedirect($this->redirect);
+			if($this->redirectCaptcha != "") 
+					HTMLRedirect($this->redirectCaptcha);
 		}
 	}
 
